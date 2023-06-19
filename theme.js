@@ -15,3 +15,10 @@ btn.addEventListener('click', () =>{
         modeSombre();
     }
 });
+
+//creation de la fonction mode sombre.
+function modeSombre(){
+    document.body.className = 'dark';
+    span.textContent = 'Theme clair';
+    localStorage.setItem('theme','sombre');
+}
