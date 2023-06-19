@@ -1,13 +1,17 @@
 //selection des elements neccessaire.
 let btn = document.querySelector("#mode");
-txtBtn = document.querySelector("span");
+let span = document.querySelector("span");
 
 //activation des buttons
 btn.addEventListener('click', () =>{
     if(document.body.classList.contains('dark')){
-        //Mode claire
+        //Mode clair
+        document.body.className = '';
+        span.textContent ='Theme sombre';
+        localStorage.setItem('theme','clair');
 
     }else{
         //Mode sombre
+        modeSombre();
     }
 });
